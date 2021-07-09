@@ -10,6 +10,7 @@ class _SliderAppState extends State<SliderApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text("FontSize Slider"),
         ),
@@ -20,14 +21,14 @@ class _SliderAppState extends State<SliderApp> {
               margin: EdgeInsets.only(top: 60, left: 35, right: 35),
               child: TextField(
                 textInputAction: TextInputAction.done,
-                style: TextStyle(fontSize: _fontValue),
+                style: TextStyle(fontSize: _fontValue,color: Colors.red),
                 maxLines: 3,
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('FontSize is:', style: TextStyle(fontSize: 18)),
+                Text('FontSize is:', style: TextStyle(fontSize: 18,color:Colors.white)),
                 SizedBox(width: 8),
                 Text(_fontValue.toStringAsFixed(2),
                     style: TextStyle(
